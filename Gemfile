@@ -6,7 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem 'heroku'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,7 +19,9 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+group :production do
+  gem 'pg', '0.12.2'
+end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
